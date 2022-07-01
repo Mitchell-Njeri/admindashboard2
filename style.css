@@ -9,13 +9,13 @@ body{
     position: absolute;
     height: 50px;
     width: 100%;
-    background-color: bisque;
+    background-color: red;
     z-index: 5;
 }
 .sidebar{
     position: absolute;
     width: 100%;
-    background-color: brown;
+    background-color: #7fc242;
     height: 100vh;
     z-index: 4;
     padding-top: 50px;
@@ -30,7 +30,7 @@ body{
     border-bottom: 1px solid white;
 }
 .sidebar ul li a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 .main-content{
