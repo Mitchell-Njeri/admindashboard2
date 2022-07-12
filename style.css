@@ -9,13 +9,13 @@ body{
     position: absolute;
     height: 50px;
     width: 100%;
-    background-color: red;
+    background-color: #f57e20;
     z-index: 5;
 }
 .sidebar{
     position: absolute;
     width: 100%;
-    background-color: #7fc242;
+    background-color: #07b00d;
     height: 100vh;
     z-index: 4;
     padding-top: 50px;

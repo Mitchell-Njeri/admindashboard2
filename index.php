@@ -1,48 +1,29 @@
+<?php 
+require_once('logics/dbconnection.php');
+//count all enrolled students
+$queryAllStudents = mysqli_query($conn, "SELECT * FROM enrollment");
+$countAllStudents = mysqli_num_rows($queryAllStudents);  //counts records
+
+//count by gender
+$queryAllFemale = mysqli_query($conn, "SELECT * FROM enrollment WHERE gender='female' ");
+$countAllFemale = mysqli_num_rows($queryAllFemale);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Bootstrap Admin Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Creating admin dashboard">
-	<meta name="keywords" content="HTML,CSS,Zalego,Technology,Zalego institute,JavaScript">
-	<meta name="author" content="Your name">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="style.css">
-</head>
+	<?php require_once('includes/headers.php')?>
+
 <body>
 	<!-- All our code. write here   -->
-	<div class="header">
-		<img src="images/zalego.png" alt="zalego" width="50px" height="50px" class="rounded-circle">
-		<a href="#" class="navbar-trigger"><span></span></a>
-
-	</div>
+	<?php require_once('includes/navbar.php')?>
 
 
 	<div class="sidebar">
-		<nav>
-			<ul>
-				<li>
-					<a href="student.html">
-						<span><i class="fa fa-group"></i></span>
-						<span>Students</span>
-					</a>
-				</li>
-				<li>
-					<a href="student.html">
-						<span><i class="fa fa-folder-open"></i></span>
-						<span>Courses</span>
-					</a>
-				</li>
-				<li>
-					<a href="student.html">
-						<span><i class="fa fa-graduation-cap"></i></span>
-						<span>Campus</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
+	<?php require_once('includes/sidebar.php')?>
+
 
 	</div>
 
@@ -66,7 +47,7 @@
 					</div>
 					<div class="card-body">
 						<span><i class="fa fa-group fa-3x"></i></span>
-						<span class="float-right">00</span>
+						<span class="float-right badge badge-dark"><?php echo $countAllStudents?></span>
 					</div>
 					<div class="card-footer"></div>
 				</div>
@@ -76,7 +57,7 @@
 					</div>
 					<div class="card-body">
 						<span><i class="fa fa-folder-open fa-3x"></i></span>
-						<span class="float-right">00</span>
+						<span class="float-right"><?php echo $countAllFemale ?></span>
 					</div>
 					<div class="card-footer"></div>
 				</div>
@@ -115,19 +96,7 @@
 		</div>
 	</div>
 
+	<?php require_once('includes/scripts.php')?>
 
-
-
-
-
-
-
-
-
-
-
-
-<script src="jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
