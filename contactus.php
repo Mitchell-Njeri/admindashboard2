@@ -38,7 +38,7 @@ $sqlfetchrecords = mysqli_query($conn, "SELECT *FROM contactus");
                                     <th>Email</th>
                                     <th>Message</th>
                                     <th>Enrolled on</th>
-                                    <th>Actions</th>
+                                
                                 </tr>
                             </thead>
                             <tbody>
