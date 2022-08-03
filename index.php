@@ -89,6 +89,7 @@ $countAllFemale = mysqli_num_rows($queryAllFemale);
 					<div class="card-body">
 						<span><i class="fa fa-chart-line-up fa-3x"></i></span>
 						<span class="float-right"></span>
+						<span><a href="subscriptions.php" class="btn btn-primary float-right btn-sm">Subscribers</a></span>
 					</div>
 				</div>
 
